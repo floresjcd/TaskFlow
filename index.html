@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow - Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Ícones do Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Cabeçalho -->
+      <header class="app-header">
+        <h1><i class="fas fa-tasks"></i> TaskFlow</h1>
+        <p>Organize seu dia com eficiência</p>
+      </header>
+
+      <!-- Formulário de adição de tarefas -->
+      <div class="task-form">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Adicione uma nova tarefa..."
+          autofocus
+        />
+        <button id="add-task-btn"><i class="fas fa-plus"></i> Adicionar</button>
+      </div>
+
+      <!-- Filtros -->
+      <div class="task-filters">
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="pending">Pendentes</button>
+        <button class="filter-btn" data-filter="completed">Concluídas</button>
+      </div>
+
+      <!-- Contadores -->
+      <div class="task-counters">
+        <span id="total-counter">Total: 0</span>
+        <span id="pending-counter">Pendentes: 0</span>
+        <span id="completed-counter">Concluídas: 0</span>
+      </div>
+
+      <!-- Lista de tarefas -->
+      <ul id="task-list" class="task-list">
+        <!-- As tarefas serão inseridas aqui via JavaScript -->
+      </ul>
+
+      <!-- Modal de edição (inicialmente oculto) -->
+      <div id="edit-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Editar Tarefa</h2>
+          <input type="text" id="edit-task-input" />
+          <button id="save-edit-btn">Salvar Alterações</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
